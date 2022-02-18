@@ -1,0 +1,37 @@
+.Course_Card{
+    width: 30%;
+
+    display: flex;
+    flex-direction: row;
+    border: ridge 1px rgb(255,0,0);
+    margin: 1% 1.5% 1% 1.5%;
+    text-decoration: none;
+    color: black;
+}
+
+.Side{
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Side p{
+    max-width: 50%;
+    font-size: 20px;
+    margin: 0px 10px 0px 10px;
+}
+
+
+.Details{
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.Details p{
+    font-size: auto;
+}

@@ -1,0 +1,13 @@
+#Lesson_overview_container{
+    width: 80%;
+}
+
+.Lesson_list{
+    list-style-type: none;
+}
+
+.Lesson_list li{
+    text-decoration: none;
+    color: black;
+    
+}

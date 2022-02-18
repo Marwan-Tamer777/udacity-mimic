@@ -1,0 +1,6 @@
+.Course_List{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 1 0 calc(33.333% - 20px);
+}
