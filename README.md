@@ -15,7 +15,7 @@ So hey there! a little summary and guide of using this project!
     
     2. type "npm i" in the command promt and wait until all the depndencies are loaded.
 
-    3. run "npm run-script server-start" in the command promot to start the back-end server. you should get the output "Listening to ort 5000"
+    3. run "npm run server-start" in the command promot to start the back-end server. you should get the output "Listening to ort 5000"
 
     4. use another command prompt and type "npm start" and wait until the development server starts. a local host webpage of the projet should open u in your default browser.
 
