@@ -4,20 +4,20 @@ So hey there! a little summary and guide of using this project!
 
 *INTRODUCTION*
 
-    so this porject serves as a training porject for full-stack development.
+    so this project serves as a training project for full-stack development.
     the website is a simple skeletal mimic of udacity system for courses and a backend supported by mongoDB database.
     the project was made with love by Marwan Tamer!
 
 *INSTALLING*
 
-    1.to start the project please open a Command promot and "cd" to the folder where this project file reside.
+    1.to start the project please open a Command prompt and "cd" to the folder where this project file reside.
     simply find where the project is located, open the folder, copy the path from the system menu above and type "cd " in the command prompt followed by the full folder path.
     
-    2. type "npm i" in the command promt and wait until all the depndencies are loaded.
+    2. type "npm i" in the command prompt and wait until all the dependencies are loaded.
 
-    3. run "npm run-script server-start" in the command promot to start the back-end server. you should get the output "Listening to ort 5000"
+    3. run "npm run server-start" in the command prompt to start the back-end server. you should get the output "Listening to ort 5000"
 
-    4. use another command prompt and type "npm start" and wait until the development server starts. a local host webpage of the projet should open u in your default browser.
+    4. use another command prompt and type "npm start" and wait until the development server starts. a local host webpage of the project should open u in your default browser.
 
 -------------------------------------------------------------------------------------------------------------
 
