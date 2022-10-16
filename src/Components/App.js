@@ -1,4 +1,3 @@
-import './css/App.css'
 import {Component} from 'react'
 import {connect} from 'react-redux'
 import Nav from './Nav'
@@ -14,7 +13,6 @@ import SignInView from './SignInView'
 import {ROUTE_GENERAL_COURSE_PAGE, ROUTE_SIGN_UP, ROUTE_SIGN_IN, ROUTE_GENERAL_LESSON_PAGE} from '../Utils/routes'
 import CourseHomePage from './CourseHomePage'
 import LessonMainPage from './LessonMainPage'
-import "./css/main.css";
 
 class App extends Component {
 
@@ -26,6 +24,14 @@ class App extends Component {
     await this.props.dispatch(handleInitialData()).then(()=>(this.setState(()=>({dataloaded:1}))))
   }
   componentDidMount(){
+      const script = document.createElement("script");
+      script.src = "https://kit.fontawesome.com/46a96426bb.js";
+      script.crossOrigin = "anonymous"
+      script.async = true;
+
+    
+      document.body.appendChild(script);
+    
         this.dataLoad()
   }
 

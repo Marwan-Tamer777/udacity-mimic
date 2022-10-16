@@ -1,7 +1,7 @@
 import {Component} from 'react'
 import CourseLessonsNavigation from './CourseLessonsNavigation'
 import CourseLessonOverview from './CourseLessonOverview'
-import "./css/main.css";
+
 
 class CourseHomePage extends Component {
 

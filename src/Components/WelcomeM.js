@@ -1,6 +1,4 @@
 import React from 'react'
-import './css/App.css'
-import "./css/main.css";
 
 export default function Welcome() {
 

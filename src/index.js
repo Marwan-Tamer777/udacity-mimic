@@ -1,7 +1,6 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './Components/css/index.css';
 import App from './Components/App';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux'
@@ -9,6 +8,7 @@ import  {BrowserRouter} from 'react-router-dom'
 import reducers from './Reducers/root'
 import middleware from './Middleware/root'
 import { createStore } from 'redux'
+import "./Components/css/main.css";
 
 
 const store = createStore(reducers,middleware)

@@ -1,7 +1,6 @@
-import './css/MCQQuestion.css'
 import {Component} from 'react'
 import {connect} from 'react-redux'
-import "./css/main.css";
+
 
 class MCQ_Question extends Component { 
 

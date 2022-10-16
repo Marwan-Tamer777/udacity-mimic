@@ -1,5 +1,3 @@
-import './css/Footer.css'
-import "./css/main.css";
 
 export default function Footer(){
 

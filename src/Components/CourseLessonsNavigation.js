@@ -1,8 +1,7 @@
-import './css/CourseLessonsNavigation.css'
 import {Component} from 'react'
 import {connect} from 'react-redux'
 import { NavLink } from 'react-router-dom'
-import "./css/main.css";
+
 
 
 

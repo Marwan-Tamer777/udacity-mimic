@@ -1,8 +1,6 @@
-import './css/ConceptPage.css'
 import {Component} from 'react'
 import {connect} from 'react-redux'
 import MCQQuestion from './MCQQuestion'
-import "./css/main.css";
 import { CONCEPT_TYPE_TITLE , CONCEPT_TYPE_TEXT , CONCEPT_TYPE_VIDEO ,
     CONCEPT_TYPE_QUIZ_MCQ , CONCEPT_TYPE_QUIZ_MULTI_MCQ,CONCEPT_TEXT_TYPE_URL,
 CONCEPT_TEXT_TYPE_ABBREVATION,CONCEPT_TEXT_TYPE_FOCUS,CONCEPT_TEXT_TYPE_CONPUTER_OUTPUT,

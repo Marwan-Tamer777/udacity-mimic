@@ -1,9 +1,7 @@
-import './css/LessonMainPage.css'
 import {Component} from 'react'
 import {connect} from 'react-redux'
 import LessonConceptList from './LessonConceptList'
 import ConceptPage from './ConceptPage'
-import "./css/main.css";
 
 class LeessonMainPage extends Component {
 

@@ -1,9 +1,7 @@
 /* eslint-disable no-sequences */
-import './css/CourseList.css'
 import {Component} from 'react'
 import {connect} from 'react-redux'
 import CourseInfoCard from './CourseInfoCard'
-import "./css/main.css";
 
 class CourseList extends Component {
 
@@ -101,7 +99,7 @@ class CourseList extends Component {
                   alt="server problem" 
                   className=" object-cover"/>
                   <p className="text-xl font-extrabold text-blue-500">
-                    There has been an error sadly and we couldn't retreive the data from the server.
+                    There has been an error sadly and we couldn't retrieve the data from the server.
                   </p>
                 </div>
               ) : (

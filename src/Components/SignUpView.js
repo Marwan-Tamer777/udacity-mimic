@@ -1,8 +1,6 @@
 import { Component } from "react";
 //import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
-import "./css/navbar.css";
-import "./css/main.css";
 import { validateUser } from "../Actions/users";
 
 class SingUpView extends Component {

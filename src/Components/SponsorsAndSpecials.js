@@ -1,7 +1,5 @@
-import './css/SponsorsAndSpecials.css'
 import {Component} from 'react'
 import {connect} from 'react-redux'
-import "./css/main.css";
 
 class SponsorsSpecialsPage extends Component {
 
