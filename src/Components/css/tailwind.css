@@ -2,8 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+body{
+    font-family: 'Inter';
+}
 .flex-third{
     flex-basis: 30%;
 }
 
 /* Nav component*/
+
+
+/* Search Classes*/
+
+#search:has(#searchInput:focus){
+    @apply bg-udacity-interactive-focus shadow-udacity-focused
+}
+
+#App:has(#searchResults){
+    @apply blur-lg text-green-400
+}

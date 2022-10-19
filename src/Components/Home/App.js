@@ -43,14 +43,17 @@ class App extends Component {
 
 
       return (
-        <div className="App bg-gray-200">
+        <div className="App flex flex-row h-[100vh] overflow-y-hidden text-udacity-text-white">
           <Nav />
           <Route exact path="/">
-            <Welcome />
-            <SearchBar />
-            <CourseList />
-            <SponsorsAndSpecials />
-            <Footer />
+            <div className='flex flex-col overflow-y-auto'>
+              <Welcome />
+              <SearchBar />
+              <CourseList />
+              <SponsorsAndSpecials />
+              <Footer />
+            </div>
+            
           </Route>
 
           <Route path={ROUTE_SIGN_UP}>

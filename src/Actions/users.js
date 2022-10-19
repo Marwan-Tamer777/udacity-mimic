@@ -26,13 +26,13 @@ export function userAddQuestion(userID,question){
   }
 }
 
-async function checkName(){
+// async function checkName(){
 
-}
+// }
 
-async function checkEmail() {
+// async function checkEmail() {
 
-}
+// }
 
 export function validateUser(name, email){
   return async () => {
