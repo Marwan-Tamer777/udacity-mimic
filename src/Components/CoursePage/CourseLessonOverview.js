@@ -1,6 +1,6 @@
 import {Component} from 'react'
 import {connect} from 'react-redux'
-import { ROUTE_GENERAL_COURSE_PAGE } from '../Utils/routes'
+import { ROUTE_GENERAL_COURSE_PAGE } from '../../Utils/routes'
 import { NavLink } from 'react-router-dom'
 
 

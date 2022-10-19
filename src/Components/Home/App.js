@@ -1,18 +1,18 @@
 import {Component} from 'react'
 import {connect} from 'react-redux'
-import Nav from './Nav'
+import Nav from '../Util/Nav'
 import Welcome from './WelcomeM'
-import {handleInitialData} from '../Actions/handleInital'
+import {handleInitialData} from '../../Actions/handleInital'
 import { Route } from 'react-router'
 import SearchBar from './Searchbar'
 import CourseList from './CourseList'
 import SponsorsAndSpecials from './SponsorsAndSpecials'
-import Footer from './Footer'
-import SignUpView from './SignUpView'
-import SignInView from './SignInView'
-import {ROUTE_GENERAL_COURSE_PAGE, ROUTE_SIGN_UP, ROUTE_SIGN_IN, ROUTE_GENERAL_LESSON_PAGE} from '../Utils/routes'
-import CourseHomePage from './CourseHomePage'
-import LessonMainPage from './LessonMainPage'
+import Footer from '../Util/Footer'
+import SignUpView from '../SignUpView'
+import SignInView from '../SignInView'
+import {ROUTE_GENERAL_COURSE_PAGE, ROUTE_SIGN_UP, ROUTE_SIGN_IN, ROUTE_GENERAL_LESSON_PAGE} from '../../Utils/routes'
+import CourseHomePage from '../CoursePage/CourseHomePage'
+import LessonMainPage from '../LessonPage/LessonMainPage'
 
 class App extends Component {
 
@@ -21,7 +21,7 @@ class App extends Component {
   }
 
   async dataLoad(){
-    await this.props.dispatch(handleInitialData()).then(()=>(this.setState(()=>({dataloaded:1}))))
+    this.props.dispatch(handleInitialData()).then(()=>(this.setState(()=>({dataloaded:1}))))
   }
   componentDidMount(){
       const script = document.createElement("script");
@@ -43,7 +43,7 @@ class App extends Component {
 
 
       return (
-        <div className="App bg-gray-200 h-full w-full">
+        <div className="App bg-gray-200">
           <Nav />
           <Route exact path="/">
             <Welcome />

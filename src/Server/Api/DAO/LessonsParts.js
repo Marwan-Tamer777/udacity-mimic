@@ -8,7 +8,7 @@ export default class LessonPartsDao {
       return;
     }
     try {
-      lessonParts = await conn.db(process.env.MFLIX_NS).collection("lesson_parts");
+      lessonParts = await conn.db(process.env.DB_NAME).collection("lesson_parts");
     } catch (e) {
       console.error(
         `Unable to establish a collection handle in moviesDAO: ${e}`

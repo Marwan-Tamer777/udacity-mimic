@@ -1,5 +1,5 @@
 import { useHistory } from 'react-router-dom'
-import { ROUTE_GENERAL_COURSE_PAGE } from '../Utils/routes';
+import { ROUTE_GENERAL_COURSE_PAGE } from '../../Utils/routes';
 import React from 'react';
 
 

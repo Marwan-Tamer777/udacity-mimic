@@ -8,7 +8,7 @@ export default class CoursesDao {
       return
     }
     try {
-      courses = await conn.db(process.env.MFLIX_NS).collection("courses")
+      courses = await conn.db(process.env.DB_NAME).collection("courses")
     } catch (e) {
       console.error(
         `Unable to establish a collection handle in moviesDAO: ${e}`,

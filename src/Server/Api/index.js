@@ -14,7 +14,7 @@ Math.random().toString(36).substr(-8)
 use this line to generate more random IDs
 */
 MongoClient.connect(
-  process.env.MFLIX_DB_URI,
+  process.env.CONN_URI,
   { useNewUrlParser: true,wtimeout: 2500 }
 )
   .catch((err) => {

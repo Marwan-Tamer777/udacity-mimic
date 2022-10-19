@@ -1,8 +1,8 @@
 import {Component} from 'react'
 import { NavLink } from 'react-router-dom'
 import {connect} from 'react-redux'
-import AccountDetailsView from './AccountDetailsView'
-import { ROUTE_HOME, ROUTE_SIGN_UP, ROUTE_SIGN_IN} from '../Utils/routes'
+import AccountDetailsView from '../AccountDetailsView'
+import { ROUTE_HOME, ROUTE_SIGN_UP, ROUTE_SIGN_IN} from '../../Utils/routes'
 
 
 class nav extends Component{

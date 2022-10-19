@@ -2,7 +2,7 @@
 import React,{Component} from 'react'
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
-import { ROUTE_GENERAL_COURSE_PAGE } from '../Utils/routes'
+import { ROUTE_GENERAL_COURSE_PAGE } from '../../Utils/routes'
 
 
 class SearchBar extends Component {

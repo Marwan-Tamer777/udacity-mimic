@@ -58,7 +58,7 @@ async function getUser(req, res) {
 }
 
 async function validateUser(req, res) {
-  console.log("GETE",req.body)
+  console.log("GET",req.body)
   let data = await UsersDao.getByName(req.body.name);
   let validName= data === null ? true : false
   console.log(data);

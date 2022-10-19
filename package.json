@@ -49,8 +49,7 @@
     "build": "react-scripts build",
     "server-start": "node ./index.js",
     "server-start-listen": "nodemon -L ./index.js",
-    "build:css": "postcss src/Components/css/tailwind.css -o src/Components/css/main.css",
-    "build:watch": "postcss src/Components/css/tailwind.css -o src/Components/css/main.css --watch",
+    "build:css": "npx tailwindcss -i ./src/Components/css/tailwind.css -o ./src/Components/css/main.css --watch",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -76,6 +75,6 @@
     "autoprefixer": "^10.3.5",
     "postcss": "^8.3.8",
     "postcss-cli": "^9.0.0",
-    "tailwindcss": "^2.2.15"
+    "tailwindcss": "^2.2.19"
   }
 }
