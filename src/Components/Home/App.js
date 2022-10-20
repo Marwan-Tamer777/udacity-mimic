@@ -4,7 +4,7 @@ import Nav from '../Util/Nav'
 import Welcome from './WelcomeM'
 import {handleInitialData} from '../../Actions/handleInital'
 import { Route } from 'react-router'
-import SearchBar from './Searchbar'
+import SearchBar from './Search'
 import CourseList from './CourseList'
 import SponsorsAndSpecials from './SponsorsAndSpecials'
 import Footer from '../Util/Footer'
@@ -46,7 +46,7 @@ class App extends Component {
         <div className="App flex flex-row h-[100vh] overflow-y-hidden text-udacity-text-white">
           <Nav />
           <Route exact path="/">
-            <div className='flex flex-col overflow-y-auto'>
+            <div className='flex flex-col overflow-y-auto transition-all duration-500'>
               <Welcome />
               <SearchBar />
               <CourseList />

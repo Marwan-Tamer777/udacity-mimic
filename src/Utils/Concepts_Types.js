@@ -17,4 +17,8 @@ export let CONCEPT_CODE_TYPE_STRING = "string"
 export let CONCEPT_CODE_TYPE_CONSOLE = "console";
 export let CONCEPT_CODE_TYPE_FUNCTIONS = "functions";
 export let CONCEPT_CODE_TYPE_COMMENT = "comment";
-export let CONCEPT_CODE_TYPE_NEW_LINE ="new line"
+export let CONCEPT_CODE_TYPE_NEW_LINE ="new line";
+
+// function generateUID () {
+//     return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15)
+//   }
