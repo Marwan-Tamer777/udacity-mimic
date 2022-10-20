@@ -27,7 +27,10 @@ class nav extends Component{
   */
 
   toggleNav(){
-    document.getElementById("navMain").classList.toggle("ml-[-16%]")
+    let nav= document.getElementById("navMain")
+    nav.style.marginLeft = nav.style.marginLeft === `-${nav.offsetWidth}px` ?
+     ("0px"):(`-${nav.offsetWidth}px`)
+    //document.getElementById("navMain").style.marginLeft = `-${document.getElementById("navMain").offsetWidth}px`
     //document.getElementById("content").classList.toggle("ml-[-12%]")
   }
 
