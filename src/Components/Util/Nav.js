@@ -27,8 +27,8 @@ class nav extends Component{
   */
 
   toggleNav(){
-    document.getElementById("navMain").classList.toggle("-left-[16%]")
-    document.getElementById("content").classList.toggle("ml-[-16%]")
+    document.getElementById("navMain").classList.toggle("ml-[-16%]")
+    //document.getElementById("content").classList.toggle("ml-[-12%]")
   }
 
   componentDidMount(){

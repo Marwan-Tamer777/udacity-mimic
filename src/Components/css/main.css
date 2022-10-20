@@ -579,10 +579,6 @@ video {
   top: 0px;
 }
 
-.-left-\[16\%\] {
-  left: -16%;
-}
-
 .top-3 {
   top: 0.75rem;
 }
@@ -692,6 +688,10 @@ video {
 
 .ml-\[-16\%\] {
   margin-left: -16%;
+}
+
+.ml-\[-12\%\] {
+  margin-left: -12%;
 }
 
 .block {
