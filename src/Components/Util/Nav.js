@@ -43,7 +43,7 @@ class nav extends Component{
           <nav id="navMain" className="relative bg-udacity-nav basis-[20%] flex flex-col items-center
            transition-all duration-500">
 
-            <button id="navIcon" className=' text-udacity-main block absolute top-3 -right-14
+            <button id="navIcon" className=' text-udacity-main block absolute top-3 -right-14 z-10
             transition duration-300 rounded-full focus:shadow-udacity-focused py-[0.5rem] px-[0.65rem]'>
             <FontAwesomeIcon icon="fa-solid fa-bars" className=' h-8 w-8'/>
           </button>

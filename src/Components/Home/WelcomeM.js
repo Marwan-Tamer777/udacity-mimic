@@ -8,7 +8,7 @@ export default function Welcome() {
     p-10 w-full">
       <p className="text-center text-udacity-text-header tracking-wide text-sm md:text-3xl">
         Hi and Welcome! I am Marwan Tamer, and this is a small project trying to 
-        re-create Udacity design and functionality using React, Redux, TailwindCSS, fontAwsome, Node.js and 
+        re-create Udacity design and functionality using React, Redux, TailwindCSS, Font Awesome, Node.js and 
         mongoDB! Hope you enjoy your time here! 
       </p>
     </div>

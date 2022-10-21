@@ -5,10 +5,6 @@
 body{
     font-family:  'Open Sans','Helvetica','sans-serif';
 }
-.flex-third{
-    flex-basis: 30%;
-}
-
 /* Nav component*/
 
 

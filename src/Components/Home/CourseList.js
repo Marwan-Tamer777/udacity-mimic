@@ -9,14 +9,14 @@ class CourseList extends Component {
     page: 0,
   };
 
-  componentDidMount() {
-    document.getElementById("dots").insertAdjacentHTML("beforeend", this.dots());
-  }
+  // componentDidMount() {
+  //   document.getElementById("dots").insertAdjacentHTML("beforeend", this.dots());
+  // }
 
-  componentDidUpdate(){
-    document.getElementById('dots').innerHTML="";
-    document.getElementById("dots").insertAdjacentHTML("beforeend", this.dots());
-  }
+  // componentDidUpdate(){
+  //   document.getElementById('dots').innerHTML="";
+  //   document.getElementById("dots").insertAdjacentHTML("beforeend", this.dots());
+  // }
 
   fadeOutAnimate(diffrence){
     if(diffrence>0){
@@ -40,29 +40,29 @@ class CourseList extends Component {
     }
   }
 
-  dots(){
+  // dots(){
 
-    var div = "<div>";
-    for(var i = 0; i<Math.round(Object.keys(this.props.Courses).length / 6);i++){
-      div = div + (i === this.state.page ?("<span class=\"text-9xl text-gray-700 \">.</span>")
-      :
-      ("<span class=\"text-9xl text-gray-500\">.</span>"))
-    }
+  //   var div = "<div>";
+  //   for(var i = 0; i<Math.round(Object.keys(this.props.Courses).length / 6);i++){
+  //     div = div + (i === this.state.page ?("<span class=\"text-9xl text-gray-700 \">.</span>")
+  //     :
+  //     ("<span class=\"text-9xl text-gray-500\">.</span>"))
+  //   }
 
-    div = div +"</div>"
-    return(div)
-  }
+  //   div = div +"</div>"
+  //   return(div)
+  // }
 
   updatePage(diffrence){
 
     if (
-      this.state.page + diffrence >=
-      Math.round(Object.keys(this.props.Courses).length / 6) 
+      this.state.page + diffrence >
+      Math.round(Object.keys(this.props.Courses).length / 4) 
     ) {
       this.setState(() => ({ page: 0 }));
     } else if (this.state.page + diffrence < 0) {
       this.setState(() => ({
-        page: Math.round(Object.keys(this.props.Courses).length / 6) - 1,
+        page: Math.round(Object.keys(this.props.Courses).length / 4) - 1,
       }));
     } else {
       this.setState(() => ({ page: this.state.page + diffrence }));
@@ -71,18 +71,16 @@ class CourseList extends Component {
 
   render() {
     return (
-      <div className=" flex items-center">
-        <div className="m-5 p-10 bg-gray-700 text-center text-lg font-bold text-blue-400 w-1/6 rounded-2xl flex flex-row">
-          <h3 className="">FAMOUS COURSES</h3>
-          <span className=" font-black text-4xl">:</span>
-        </div>
+      <div className=" flex flex-col justify-center items-center">
+          <h3 className="mr-auto text-udacity-text-black font-bold ml-3 my-4 ">Available Courses:</h3>
 
-        <div className="flex flex-col">
+
+
           <div className="flex flex-row">
             <img
               src="https://www.udacity.com/assets/iridium/images/home-in/arrow-left-blue-solid.svg"
               alt="left arrow"
-              className="h-full bg-transparent object-none self-center"
+              className="h-full bg-transparent object-none self-center mx-3 w-fit h-fit"
               onClick={() => (
                 this.fadeOutAnimate(-1),
                 setTimeout(
@@ -91,7 +89,7 @@ class CourseList extends Component {
                 )
               )}
             />
-            <div className="flex flex-row flex-wrap relative" id="CoursesCards">
+            <div className="flex flex-row flex-wrap gap-2 justify-between relative" id="CoursesCards">
               {
               Object.keys(this.props.Courses).length === 0 ? (
                 <div className="flex flex-col content-center justify-center">
@@ -103,22 +101,21 @@ class CourseList extends Component {
                   </p>
                 </div>
               ) : (
-                ""
-              )
-              }
-              {Object.keys(this.props.Courses)
-                .slice(this.state.page * 6, this.state.page * 6 + 6)
+                Object.keys(this.props.Courses)
+                .slice(this.state.page * 4, this.state.page * 4 + 4)
                 .map((keyName) => (
                   <CourseInfoCard
                     course={this.props.Courses[keyName]}
                     key={this.props.Courses[keyName].ID}
                   />
-                ))}
+                ))
+              )
+              }
             </div>
             <img
               src="https://www.udacity.com/assets/iridium/images/home-in/arrow-right-blue-solid.svg"
               alt="right arrow"
-              className="h-full bg-transparent object-none self-center mr-3"
+              className="h-full bg-transparent object-none self-center mx-3 w-fit h-fit"
               onClick={() => (
                 this.fadeOutAnimate(1),
                 setTimeout(
@@ -128,8 +125,8 @@ class CourseList extends Component {
               )}
             />
           </div>
-          <div id="dots"></div>
-        </div>
+
+          {/* <div id="dots"></div> */}
       </div>
     );
   }

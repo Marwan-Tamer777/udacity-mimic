@@ -26,6 +26,7 @@ module.exports = {
           },
           'nav':"#1f2932",
           "black":"#0f2b3d",
+          "star":"#0b0b0b",
           "navy":"#02b3e4",
           "grayDark":"rgba(31,41,50,.5)",
           "emerald":"#2e3d49",
