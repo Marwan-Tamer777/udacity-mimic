@@ -62,7 +62,7 @@ class CourseList extends Component {
       this.setState(() => ({ page: 0 }));
     } else if (this.state.page + diffrence < 0) {
       this.setState(() => ({
-        page: Math.round(Object.keys(this.props.Courses).length / 4) - 1,
+        page: Math.ceil(Object.keys(this.props.Courses).length / 4)-1,
       }));
     } else {
       this.setState(() => ({ page: this.state.page + diffrence }));

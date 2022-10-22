@@ -5,12 +5,12 @@ class SponsorsSpecialsPage extends Component {
 
     render() {
       return (
-        <div>
-          <div className="Special">
-            <h1 className=" font-extrabold text-center text-gray-700 p-10 text-4xl">
+        <div className="my-4">
+          <div>
+            <h3 className="mr-auto text-udacity-text-black font-bold ml-3 my-4 ">
               What makes us special?
-            </h1>
-            <div className="Special_container">
+            </h3>
+            <div className=" flex flex-row flex-wrap">
               <div>
                 <img
                   src="https://elzero.org/wp-content/themes/elzero/imgs/features/practical.svg"
@@ -18,7 +18,7 @@ class SponsorsSpecialsPage extends Component {
                 />
                 <h5>Practical Application</h5>
                 <p>
-                  We offer practical project to train, ehance and imprint your
+                  We offer practical project to train, enhance and imprint your
                   newly acquired skills!
                 </p>
               </div>
@@ -51,7 +51,7 @@ class SponsorsSpecialsPage extends Component {
                 />
                 <h5>Free Hosting</h5>
                 <p>
-                  If you make a beatuiful design and elegant, we will add it to
+                  If you make a beautiful design and elegant, we will add it to
                   a folder under your name so you can access it!
                 </p>
               </div>
@@ -74,7 +74,7 @@ class SponsorsSpecialsPage extends Component {
                 <h5>Academic-level Education</h5>
                 <p>
                   Here we offer Creative, And Innovative Academic teaching. So
-                  you understand everthing the right way!
+                  you understand everything the right way!
                 </p>
               </div>
               <div>
@@ -102,42 +102,50 @@ class SponsorsSpecialsPage extends Component {
             </div>
           </div>
 
-          <div className="Sponsors">
-            <h3 className=" font-bold text-center text-gray-700 p-10 text-2xl">
+          <div>
+            <h3 className=" mr-auto text-udacity-text-black font-bold ml-3 my-4">
               Powered by the industry just for you!
             </h3>
-            <div className="Sponsors_logos">
+            <div className="flex flex-row flex-wrap justify-around items-center">
               <img
                 src="https://www.udacity.com/www-proxy/contentful/assets/2y9b3o528xhq/2UtwS6ncaXmx6WqVEO6Oub/8d19d851b14ab6b913669fae6ca3a8b5/google-logo.png?fm=webp&q=100"
                 alt="img1"
+                className="basis-[10%] object-cover"
               />
               <img
                 src="https://www.udacity.com/www-proxy/contentful/assets/2y9b3o528xhq/5cvkzOuNDF7ufQuiGnWEde/5084a36dd91a11028bbeb722f7f21818/aws-logo.png?fm=webp&q=100"
                 alt="img2"
+                className="basis-[10%] object-cover"
               />
               <img
                 src="https://www.udacity.com/www-proxy/contentful/assets/2y9b3o528xhq/2peqKnHw89OvG9dNgzqsFL/a5795ff607036d37505cffa42fdddee1/mode-logo.png?fm=webp&q=100"
                 alt="img3"
+                className="basis-[10%] object-cover"
               />
               <img
                 src="https://www.udacity.com/www-proxy/contentful/assets/2y9b3o528xhq/3ia9REv0wKYiEEXMEERLf1/7f9ac4f31d4183c5fd4d660b7177b7a2/alteryx-logo.png?fm=webp&q=100"
                 alt="img4"
+                className="basis-[10%] object-cover"
               />
               <img
                 src="https://www.udacity.com/www-proxy/contentful/assets/2y9b3o528xhq/6FHSYdz556PxJKVXfiyLSN/547b71cad54a60050e378a5dca14e834/ibm-logo.png?fm=webp&q=100"
                 alt="img5"
+                className="basis-[10%] object-cover"
               />
               <img
                 src="https://www.udacity.com/www-proxy/contentful/assets/2y9b3o528xhq/3kGWSPzG7LPV7JJ9CSPtUX/1b5b6834edbfb1e577271bd182ba1f92/microsoft-logo.png?fm=webp&q=100"
                 alt="img6"
+                className="basis-[10%] object-cover"
               />
               <img
                 src="https://www.udacity.com/www-proxy/contentful/assets/2y9b3o528xhq/6qNF9DiK0Fylqh4iDepDkp/29663f48299077e1e3ed22ae11922ce9/Intel-logo.png?fm=webp&q=100"
                 alt="img7"
+                className="basis-[10%] object-cover"
               />
               <img
                 src="https://www.udacity.com/www-proxy/contentful/assets/2y9b3o528xhq/3PZY3lsFdMavhdGaA37uOx/f4088cc9f654b9266697e75961bd9bac/uipath-logo.png?fm=webp&q=100"
                 alt="img8"
+                className="basis-[10%] object-cover"
               />
             </div>
           </div>

@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.2.0 | MIT License | https://tailwindcss.com
+! tailwindcss v3.2.1 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -652,6 +652,11 @@ video {
   margin-bottom: 1rem;
 }
 
+.mx-3 {
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+}
+
 .mx-10 {
   margin-left: 2.5rem;
   margin-right: 2.5rem;
@@ -660,11 +665,6 @@ video {
 .mx-5 {
   margin-left: 1.25rem;
   margin-right: 1.25rem;
-}
-
-.mx-3 {
-  margin-left: 0.75rem;
-  margin-right: 0.75rem;
 }
 
 .mr-auto {
@@ -809,6 +809,10 @@ video {
 
 .basis-\[20\%\] {
   flex-basis: 20%;
+}
+
+.basis-\[10\%\] {
+  flex-basis: 10%;
 }
 
 .transform {
@@ -970,6 +974,10 @@ video {
 
 .justify-between {
   justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
 }
 
 .justify-evenly {

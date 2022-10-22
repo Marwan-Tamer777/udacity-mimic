@@ -3,7 +3,7 @@ import {connect} from 'react-redux'
 import Nav from '../Util/Nav'
 import Welcome from './WelcomeM'
 import {handleInitialData} from '../../Actions/handleInital'
-import { Route } from 'react-router'
+import { Route ,Routes} from 'react-router'
 import SearchBar from './Search'
 import CourseList from './CourseList'
 import SponsorsAndSpecials from './SponsorsAndSpecials'
@@ -44,37 +44,33 @@ class App extends Component {
 
       return (
         <div className="App flex flex-row h-[100vh] overflow-y-hidden text-udacity-text-white">
-          
-          <Route exact path="/">
-            <div className='flex flex-row '>
-            <Nav />
-            <div className='flex flex-col overflow-y-auto transition-all duration-500'>
-              <Welcome />
-              <SearchBar />
-              <CourseList />
-              <SponsorsAndSpecials />
-              <Footer />
-            </div>
-            </div>
-          </Route>
+          <Routes>
+            <Route
+              exact
+              path="/"
+              element={
+                <div className="flex flex-row ">
+                  <Nav />
+                  <div className="flex flex-col overflow-y-auto transition-all duration-500">
+                    <Welcome />
+                    <SearchBar />
+                    <CourseList />
+                    <SponsorsAndSpecials />
+                    <Footer />
+                  </div>
+                </div>
+              }
+            ></Route>
 
-          <Route path={ROUTE_SIGN_UP}>
-            <SignUpView/>
-          </Route>
+            <Route path={ROUTE_SIGN_UP} element={<SignUpView />}></Route>
 
-          <Route path={ROUTE_SIGN_IN}>
-            <SignInView />
-          </Route>
+            <Route path={ROUTE_SIGN_IN} element={<SignInView />}></Route>
 
-          <Route path={ROUTE_GENERAL_COURSE_PAGE}>
-            <CourseHomePage />
-          </Route>
+            <Route path={ROUTE_GENERAL_COURSE_PAGE} element={<CourseHomePage />}
+            ></Route>
 
-          <Route path={ROUTE_GENERAL_LESSON_PAGE}>
-            <LessonMainPage />
-          </Route>
-
-
+            <Route path={ROUTE_GENERAL_LESSON_PAGE} element={<LessonMainPage />}></Route>
+          </Routes>
         </div>
       );
   }
