@@ -72,7 +72,7 @@ class CourseList extends Component {
   render() {
     return (
       <div className=" flex flex-col justify-center items-center">
-          <h3 className="mr-auto text-udacity-text-black font-bold ml-3 my-4 ">Available Courses:</h3>
+          <h3 className="mr-auto text-udacity-text-header font-bold ml-3 my-4 ">Available Courses:</h3>
 
 
 

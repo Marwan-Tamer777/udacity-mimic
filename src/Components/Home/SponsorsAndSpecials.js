@@ -3,98 +3,127 @@ import {connect} from 'react-redux'
 
 class SponsorsSpecialsPage extends Component {
 
+  /**
+   * 
+   * the images provided in this part are from udacity.com and elzeor.org respectively and used
+   * as part of this personal project.
+   */
     render() {
       return (
-        <div className="my-4">
+        <div className="my-4 text-udacity-text-black">
           <div>
-            <h3 className="mr-auto text-udacity-text-black font-bold ml-3 my-4 ">
+            <h3 className="mr-auto text-udacity-text-header font-bold ml-3 my-4 ">
               What makes us special?
             </h3>
-            <div className=" flex flex-row flex-wrap">
-              <div>
+            <div className=" flex flex-row flex-wrap justify-around items-center gap-6">
+              <div className="basis-[20%]">
                 <img
                   src="https://elzero.org/wp-content/themes/elzero/imgs/features/practical.svg"
                   alt="Practical"
+                  className=" object-cover w-[60%] h-[60%] mx-auto my-4"
                 />
-                <h5>Practical Application</h5>
-                <p>
+                <h5 className="text-center font-bold text-udacity-text-header">
+                  Practical Application
+                </h5>
+                <p className="text-center font-thin text-udacity-text-black">
                   We offer practical project to train, enhance and imprint your
                   newly acquired skills!
                 </p>
               </div>
-              <div>
+              <div className="basis-[20%]">
                 <img
                   src="https://elzero.org/wp-content/themes/elzero/imgs/features/trainings.svg"
                   alt="Training"
+                  className=" object-cover w-[60%] h-[60%] mx-auto my-4"
                 />
-                <h5>Contests and Training</h5>
-                <p>
+                <h5 className="text-center font-bold text-udacity-text-header">
+                  Contests and Training
+                </h5>
+                <p className="text-center font-thin text-udacity-text-black">
                   We would love you to share in put contests and training
                   questions to become a better developer!
                 </p>
               </div>
-              <div>
+              <div className="basis-[20%]">
                 <img
                   src="https://elzero.org/wp-content/themes/elzero/imgs/features/ideas.svg"
                   alt="Ideas"
+                  className=" object-cover w-[60%] h-[60%] mx-auto my-4"
                 />
-                <h5>Innovative Ideas</h5>
-                <p>
+                <h5 className="text-center font-bold text-udacity-text-header">
+                  Innovative Ideas
+                </h5>
+                <p className="text-center font-thin text-udacity-text-black">
                   Our Educative system ensures that you will use all the skills
                   you gain and will never waste time!
                 </p>
               </div>
-              <div>
+              <div className="basis-[20%]">
                 <img
                   src="https://elzero.org/wp-content/themes/elzero/imgs/features/hosting.svg"
                   alt="Hosting"
+                  className=" object-cover w-[60%] h-[60%] mx-auto my-4"
                 />
-                <h5>Free Hosting</h5>
-                <p>
+                <h5 className="text-center font-bold text-udacity-text-header">
+                  Free Hosting
+                </h5>
+                <p className="text-center font-thin text-udacity-text-black">
                   If you make a beautiful design and elegant, we will add it to
                   a folder under your name so you can access it!
                 </p>
               </div>
-              <div>
+              <div className="basis-[20%]">
                 <img
                   src="https://elzero.org/wp-content/themes/elzero/imgs/features/courses.svg"
                   alt="Courses"
+                  className=" object-cover w-[60%] h-[60%] mx-auto my-4"
                 />
-                <h5>Free Courses</h5>
-                <p>
+                <h5 className="text-center font-bold text-udacity-text-header">
+                  Free Courses
+                </h5>
+                <p className="text-center font-thin text-udacity-text-black">
                   All courses are free with no subscription need whatsoever! we
                   only hope to spread knowledge
                 </p>
               </div>
-              <div>
+              <div className="basis-[20%]">
                 <img
                   src="https://elzero.org/wp-content/themes/elzero/imgs/features/academy.svg"
                   alt="Academic"
+                  className=" object-cover w-[60%] h-[60%] mx-auto my-4"
                 />
-                <h5>Academic-level Education</h5>
-                <p>
+                <h5 className="text-center font-bold text-udacity-text-header">
+                  Academic-level Education
+                </h5>
+                <p className="text-center font-thin text-udacity-text-black">
                   Here we offer Creative, And Innovative Academic teaching. So
                   you understand everything the right way!
                 </p>
               </div>
-              <div>
+              <div className="basis-[20%]">
                 <img
                   src="https://elzero.org/wp-content/themes/elzero/imgs/features/expert.svg"
                   alt="Expert"
+                  className=" object-cover w-[60%] h-[60%] mx-auto my-4"
                 />
-                <h5>Your Path to Becoming an Expert</h5>
-                <p>
+                <h5 className="text-center font-bold text-udacity-text-header">
+                  Your Path to Becoming an Expert
+                </h5>
+                <p className="text-center font-thin text-udacity-text-black">
                   Learn the right steps to becoming and expert so you don't
                   waste your time!
                 </p>
               </div>
-              <div>
+              <div className="basis-[20%]">
                 <img
                   src="https://elzero.org/wp-content/themes/elzero/imgs/features/community.svg"
                   alt="Community"
+                  className=" object-cover w-[60%] h-[60%] mx-auto my-4"
                 />
-                <h5>Our Active Community</h5>
-                <p>
+                <h5 className="text-center font-bold text-udacity-text-header">
+                  Our Active Community
+                </h5>
+                <p className="text-center font-thin text-udacity-text-black">
                   Join our facebook to get help from passionate people like
                   yourself!
                 </p>
@@ -103,7 +132,7 @@ class SponsorsSpecialsPage extends Component {
           </div>
 
           <div>
-            <h3 className=" mr-auto text-udacity-text-black font-bold ml-3 my-4">
+            <h3 className=" mr-auto text-udacity-text-header font-bold ml-3 my-4">
               Powered by the industry just for you!
             </h3>
             <div className="flex flex-row flex-wrap justify-around items-center">

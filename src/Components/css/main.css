@@ -745,6 +745,14 @@ video {
   height: 2rem;
 }
 
+.h-\[50\%\] {
+  height: 50%;
+}
+
+.h-\[60\%\] {
+  height: 60%;
+}
+
 .w-1\/2 {
   width: 50%;
 }
@@ -793,6 +801,14 @@ video {
 
 .w-8 {
   width: 2rem;
+}
+
+.w-\[50\%\] {
+  width: 50%;
+}
+
+.w-\[60\%\] {
+  width: 60%;
 }
 
 .basis-\[45\%\] {
@@ -998,6 +1014,10 @@ video {
 
 .gap-11 {
   gap: 2.75rem;
+}
+
+.gap-6 {
+  gap: 1.5rem;
 }
 
 .self-center {
