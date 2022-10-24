@@ -1,18 +1,15 @@
 import {Component} from 'react'
 import {connect} from 'react-redux'
-import Nav from '../Util/Nav'
-import Welcome from './WelcomeM'
-import {handleInitialData} from '../../Actions/handleInital'
+import Nav from './Util/Nav'
+import Welcome from './Home/WelcomeM'
+import {handleInitialData} from '../Actions/handleInital'
 import { Route ,Routes} from 'react-router'
-import SearchBar from './Search'
-import CourseList from './CourseList'
-import SponsorsAndSpecials from './SponsorsAndSpecials'
-import Footer from '../Util/Footer'
-import SignUpView from '../SignUpView'
-import SignInView from '../SignInView'
-import {ROUTE_GENERAL_COURSE_PAGE, ROUTE_SIGN_UP, ROUTE_SIGN_IN, ROUTE_GENERAL_LESSON_PAGE} from '../../Utils/routes'
-import CourseHomePage from '../CoursePage/CourseHomePage'
-import LessonMainPage from '../LessonPage/LessonMainPage'
+import Homepage from './Home/Home'
+import SignUpView from './SignUpView'
+import SignInView from './SignInView'
+import {ROUTE_GENERAL_COURSE_PAGE, ROUTE_SIGN_UP, ROUTE_SIGN_IN, ROUTE_GENERAL_LESSON_PAGE} from '../Utils/routes'
+import CourseHomePage from './CoursePage/CourseHomePage'
+import LessonMainPage from './LessonPage/LessonMainPage'
 
 class App extends Component {
 
@@ -48,28 +45,22 @@ class App extends Component {
             <Route
               exact
               path="/"
-              element={
-                <div className="flex flex-row ">
-                  <Nav />
-                  <div className="flex flex-col overflow-y-auto transition-all duration-500">
-                    <Welcome />
-                    <SearchBar />
-                    <CourseList />
-                    <SponsorsAndSpecials />
-                    <Footer />
-                  </div>
-                </div>
-              }
+              element={<Homepage/>}
             ></Route>
 
             <Route path={ROUTE_SIGN_UP} element={<SignUpView />}></Route>
 
             <Route path={ROUTE_SIGN_IN} element={<SignInView />}></Route>
 
-            <Route path={ROUTE_GENERAL_COURSE_PAGE} element={<CourseHomePage />}
+            <Route
+              path={ROUTE_GENERAL_COURSE_PAGE + "*"}
+              element={<CourseHomePage />}
             ></Route>
 
-            <Route path={ROUTE_GENERAL_LESSON_PAGE} element={<LessonMainPage />}></Route>
+            <Route
+              path={ROUTE_GENERAL_LESSON_PAGE + "*"}
+              element={<LessonMainPage />}
+            ></Route>
           </Routes>
         </div>
       );

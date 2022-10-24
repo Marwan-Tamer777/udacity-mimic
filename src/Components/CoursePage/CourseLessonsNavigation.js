@@ -12,7 +12,7 @@ class CourseLessonsNavigation extends Component {
         let course = this.props.Courses[(window.location.pathname).substring(8,30)]
         if(course.lessonsID.length === 1){return<div></div>}
         return (
-          <div className=" w-1/5 overflow-y-auto border-2 border-black shadow-lg h-list fixed left-0 top-top-nav z-10">
+          <div className="overflow-y-auto border-2 border-black shadow-lg transition-all duration-500">
             <h4 className="p-3 bg-gray-700 text-blue-400 font-semibold text-xl">
               {course.about}
             </h4>

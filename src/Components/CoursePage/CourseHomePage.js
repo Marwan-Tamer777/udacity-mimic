@@ -1,5 +1,5 @@
 import {Component} from 'react'
-import CourseLessonsNavigation from './CourseLessonsNavigation'
+import CourseNav from "./CourseNav"
 import CourseLessonOverview from './CourseLessonOverview'
 
 
@@ -9,16 +9,21 @@ class CourseHomePage extends Component {
         currentLessonID: ''
     }
 
-    updateCurrentLesson= (ID)=> (this.setState(()=>({currentLessonID: ID})))
+    updateCurrentLesson= (ID)=> (
+        this.setState(()=>({currentLessonID: ID})))
     
     
 
     render(){
 
-        return(<div className="flex flex-row ">
-            <CourseLessonsNavigation callback={this.updateCurrentLesson}/>
-            <CourseLessonOverview currentLessonID={this.state.currentLessonID}/>
-        </div>)
+        return (
+          <div className="flex flex-row relative">
+            <CourseNav callback={this.updateCurrentLesson} />
+            <CourseLessonOverview
+              currentLessonID={this.state.currentLessonID}
+            />
+          </div>
+        );
     }
 
 
