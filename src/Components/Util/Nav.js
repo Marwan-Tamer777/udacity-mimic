@@ -27,9 +27,9 @@ class nav extends Component{
   */
 
   toggleNav(){
-    let nav= document.getElementById("navMain")
-    nav.style.marginLeft =
-      nav.style.marginLeft === "0px" ? `-${nav.offsetWidth}px` : "0px";
+    let nav = document.getElementById("navMain");
+    //nav.style.transform = nav.style.transform === "translateX(-100%)" ? "" : "translateX(-100%)";
+    nav.style.marginLeft = nav.style.marginLeft === `-${nav.offsetWidth}px` ? "0px": `-${nav.offsetWidth}px`;
     //document.getElementById("navMain").style.marginLeft = `-${document.getElementById("navMain").offsetWidth}px`
     //document.getElementById("content").classList.toggle("ml-[-12%]")
   }

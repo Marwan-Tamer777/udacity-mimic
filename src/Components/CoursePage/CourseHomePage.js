@@ -19,9 +19,7 @@ class CourseHomePage extends Component {
         return (
           <div className="flex flex-row relative">
             <CourseNav callback={this.updateCurrentLesson} />
-            <CourseLessonOverview
-              currentLessonID={this.state.currentLessonID}
-            />
+            <CourseLessonOverview currentLessonID={this.state.currentLessonID}/>
           </div>
         );
     }

@@ -14,14 +14,17 @@ const CoruseNav = (props) => {
 
     let toggleNav =()=>{
         let nav= document.getElementById("navMain")
-        nav.style.left = nav.style.left === ("0px") ? `-${nav.offsetWidth}px` :("0px")
+        nav.style.marginLeft =
+          nav.style.marginLeft === `-${nav.offsetWidth}px`
+            ? "0px"
+            : `-${nav.offsetWidth}px`;
   }
 
 
   return (
     <div
       id="navMain"
-      className="flex flex-row relative transition-all duration-500"
+      className="flex flex-row relative transition-all duration-500 min-w-fit"
     >
       <button
         id="navIcon"
@@ -30,8 +33,9 @@ const CoruseNav = (props) => {
       >
         <FontAwesomeIcon icon="fa-solid fa-bars" className=" h-8 w-8" />
       </button>
+
       <nav
-        className="relative bg-udacity-nav flex flex-col items-center w-fit"
+        className="bg-udacity-nav flex flex-col items-center w-fit"
       >
         <div className="p-2 mx-auto">
           <UdacityLogo />

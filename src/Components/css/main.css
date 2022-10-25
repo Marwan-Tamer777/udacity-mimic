@@ -575,20 +575,16 @@ video {
   top: 0.75rem;
 }
 
+.-right-14 {
+  right: -3.5rem;
+}
+
 .top-0 {
   top: 0px;
 }
 
 .left-0 {
   left: 0px;
-}
-
-.-right-14 {
-  right: -3.5rem;
-}
-
-.-right-4 {
-  right: -1rem;
 }
 
 .z-10 {
@@ -777,14 +773,14 @@ video {
   width: 2rem;
 }
 
-.w-full {
-  width: 100%;
-}
-
 .w-fit {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+}
+
+.w-full {
+  width: 100%;
 }
 
 .w-\[40\%\] {
@@ -815,12 +811,18 @@ video {
   width: 8.333333%;
 }
 
-.basis-\[65\%\] {
-  flex-basis: 65%;
+.min-w-fit {
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
 }
 
-.basis-\[35\%\] {
-  flex-basis: 35%;
+.grow {
+  flex-grow: 1;
+}
+
+.grow-0 {
+  flex-grow: 0;
 }
 
 .basis-\[45\%\] {
@@ -843,8 +845,28 @@ video {
   flex-basis: 10%;
 }
 
-.basis-\[70\%\] {
-  flex-basis: 70%;
+.basis-\[65\%\] {
+  flex-basis: 65%;
+}
+
+.basis-\[35\%\] {
+  flex-basis: 35%;
+}
+
+.basis-\[40\%\] {
+  flex-basis: 40%;
+}
+
+.basis-\[60\%\] {
+  flex-basis: 60%;
+}
+
+.basis-\[fit\] {
+  flex-basis: fit;
+}
+
+.basis-auto {
+  flex-basis: auto;
 }
 
 .transform {
@@ -1520,6 +1542,12 @@ video {
           backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 .transition {
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, -webkit-transform, -webkit-filter, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
@@ -1528,18 +1556,12 @@ video {
   transition-duration: 150ms;
 }
 
-.transition-all {
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
+.duration-500 {
+  transition-duration: 500ms;
 }
 
 .duration-300 {
   transition-duration: 300ms;
-}
-
-.duration-500 {
-  transition-duration: 500ms;
 }
 
 body{
