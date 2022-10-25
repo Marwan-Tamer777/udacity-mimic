@@ -703,6 +703,14 @@ video {
   margin-left: 0px;
 }
 
+.ml-auto {
+  margin-left: auto;
+}
+
+.mt-auto {
+  margin-top: auto;
+}
+
 .block {
   display: block;
 }
@@ -867,6 +875,10 @@ video {
 
 .basis-auto {
   flex-basis: auto;
+}
+
+.basis-0 {
+  flex-basis: 0px;
 }
 
 .transform {
@@ -1147,6 +1159,26 @@ video {
   border-width: 2px;
 }
 
+.border-b-4 {
+  border-bottom-width: 4px;
+}
+
+.border-b-2 {
+  border-bottom-width: 2px;
+}
+
+.border-b-\[1px\] {
+  border-bottom-width: 1px;
+}
+
+.border-b-\[\.5px\] {
+  border-bottom-width: .5px;
+}
+
+.border-b-\[0\.1rem\] {
+  border-bottom-width: 0.1rem;
+}
+
 .border-solid {
   border-style: solid;
 }
@@ -1174,6 +1206,26 @@ video {
 .border-gray-500 {
   --tw-border-opacity: 1;
   border-color: rgb(107 114 128 / var(--tw-border-opacity));
+}
+
+.border-udacity-text-gray {
+  --tw-border-opacity: 1;
+  border-color: rgb(200 205 210 / var(--tw-border-opacity));
+}
+
+.border-udacity-black {
+  --tw-border-opacity: 1;
+  border-color: rgb(15 43 61 / var(--tw-border-opacity));
+}
+
+.border-udacity-text-header {
+  --tw-border-opacity: 1;
+  border-color: rgb(31 41 50 / var(--tw-border-opacity));
+}
+
+.border-b-udacity-text-gray {
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(200 205 210 / var(--tw-border-opacity));
 }
 
 .bg-gray-700 {
@@ -1218,6 +1270,11 @@ video {
 .bg-udacity-interactive-click {
   --tw-bg-opacity: 1;
   background-color: rgb(1 122 155 / var(--tw-bg-opacity));
+}
+
+.bg-udacity-emerald {
+  --tw-bg-opacity: 1;
+  background-color: rgb(46 61 73 / var(--tw-bg-opacity));
 }
 
 .bg-courseCard {
@@ -1305,6 +1362,21 @@ video {
 .px-\[0\.65rem\] {
   padding-left: 0.65rem;
   padding-right: 0.65rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .pl-10 {
@@ -1478,6 +1550,16 @@ video {
 .text-purple-700 {
   --tw-text-opacity: 1;
   color: rgb(126 34 206 / var(--tw-text-opacity));
+}
+
+.text-udacity-text-gray {
+  --tw-text-opacity: 1;
+  color: rgb(200 205 210 / var(--tw-text-opacity));
+}
+
+.text-udacity-greenLight {
+  --tw-text-opacity: 1;
+  color: rgb(21 194 107 / var(--tw-text-opacity));
 }
 
 .underline {

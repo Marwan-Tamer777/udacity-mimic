@@ -52,7 +52,7 @@ class nav extends Component{
               <UdacityLogo/>
             </div>
             
-            <ul className="flex flex-col w-full p-2 justify-center items-start  text-lg text-udacity-text-white capitalize">
+            <ul className="flex flex-col w-full p-2 gap-1 justify-center items-start  text-lg text-udacity-text-white capitalize">
 
               <li className='p-2 rounded-xl hover:shadow-udacity-focused transition-all
                flex flex-row items-center'>
