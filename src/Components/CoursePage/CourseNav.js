@@ -45,8 +45,6 @@ const CoruseNav = (props) => {
           <li className="p-2 rounded-xl hover:shadow-udacity-focused transition-all">
             <NavLink
               to={ROUTE_HOME}
-              exact
-              activeClassName="active"
               className="flex flex-col justify-center items-center"
             >
               <FontAwesomeIcon icon="fa-solid fa-house" className="mx-3" />
@@ -57,8 +55,7 @@ const CoruseNav = (props) => {
           <li className="p-2 rounded-xl hover:shadow-udacity-focused transition-all">
             <NavLink
               to={ROUTE_HOME}
-              exact
-              activeClassName="active"
+
               className="flex flex-col justify-center items-center"
             >
               <FontAwesomeIcon icon="fa-solid fa-life-ring" className="mx-3" />
@@ -69,8 +66,7 @@ const CoruseNav = (props) => {
           <li className="p-2 rounded-xl hover:shadow-udacity-focused transition-all">
             <NavLink
               to={ROUTE_HOME}
-              exact
-              activeClassName="active"
+
               className="flex flex-col justify-center items-center"
             >
               <FontAwesomeIcon icon="fa-regular fa-compass" className="mx-3" />
@@ -81,8 +77,7 @@ const CoruseNav = (props) => {
           <li className="p-2 rounded-xl hover:shadow-udacity-focused transition-all">
             <NavLink
               to={ROUTE_HOME}
-              exact
-              activeClassName="active"
+
               className="flex flex-col justify-center items-center"
             >
               <FontAwesomeIcon icon="fa-solid fa-gear" className="mx-3" />

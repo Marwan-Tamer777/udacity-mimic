@@ -2,14 +2,28 @@ import {Component} from 'react'
 import {connect} from 'react-redux'
 import { ROUTE_GENERAL_COURSE_PAGE } from '../../Utils/routes'
 import { Link } from 'react-router-dom'
+import CourseLessonCard from './CourseLessonCard';
 
 
 
 class CourseLessonOverview extends Component {
 
+
+  toggleStickyHeader(){
+
+    let list = document.getElementById("courseLessonsList");
+    let header = document.getElementById("courseHeader");
+
+    let scrollLength = list.scrollHeight - list.offsetHeight
+    if((list.scrollTop/scrollLength)>0.25){
+      header.classList.add("course-header-sticky");
+    } else {
+      header.classList.remove("course-header-sticky");
+    }
+  }
+
     render(){
 
-        
         let course = this.props.Courses[(window.location.pathname).substring(8,30)]
         let lesson = this.props.currentLessonID;
         let lessonParts = lesson.length ===0 ? ('') : (this.props.Lessons[lesson].lessonPartsID.map((ID)=>(
@@ -26,42 +40,44 @@ class CourseLessonOverview extends Component {
         window.history.pushState({},'',new URL(window.location.origin+ ROUTE_GENERAL_COURSE_PAGE + course.ID+ '/'+lesson))
         }
 
+
         return (
-          <div className="grow flex flex-col justify-start content-center overflow-y-auto transition-all duration-500">
-            <div>
-              <h1 className="text-4xl bg-gray-700 text-blue-400 p-10 font-bold">
+          <div className="grow flex flex-col justify-start content-center relative transition-all duration-500">
+            <div
+              id="courseHeader"
+              className=" text-udacity-text-black sticky top-0 "
+            >
+              <h1
+                className=" border-[#dbe2e8] border-b-[0.1rem] border-solid
+               text-4xl p-10 font-thin transition-all duration-300"
+              >
                 {course.lessonsID.indexOf(lesson) +
                   1 +
                   ". " +
                   this.props.Lessons[lesson].title}
               </h1>
+
+              <div className="flex flex-row p-4 justify-between items-center">
+                <p>
+                  {course.lessonsID.indexOf(lesson) ===
+                  course.lessonsID.length - 1
+                    ? `Proceed to Part ${
+                        course.lessonsID.indexOf(lesson) + 1
+                      } to continue learning`
+                    : `You have completed all requirements for Part ${course.lessonsID.length}`}
+                </p>
+                <p>100% VIEWED</p>
+              </div>
             </div>
-            <div>
+
+            <div
+              id="courseLessonsList"
+              onScroll={this.toggleStickyHeader}
+              className="overflow-y-auto"
+            >
               <ul>
                 {lessonParts.map((lessonPart, index) => (
-                  <Link to={"/Lesson/" + lessonPart.ID}>
-                    <li
-                      className=" border-solid border-2 border-black shadow-2xl hover:shadow-none
-                    m-10 pl-10 flex flex-row rounded-2xl justify-start content-center bg-white"
-                    >
-                      <h3 className="my-auto text-gray-500 font-medium text-xl">
-                        Lesson {index + 1}:
-                      </h3>
-                      <div className=" mx-auto flex flex-col justify-evenly content-evenly">
-                        <p className="text-2xl text-blue-400 font-semibold">
-                          {lessonPart.title}
-                        </p>
-                        <p className=" font-medium p-4">
-                          {lessonPart.description}
-                        </p>
-                      </div>
-                      <img
-                        src={lessonPart.imgURL}
-                        alt="pic"
-                        className=" right-0 object-cover w-1/3 h-1/2 rounded-r-2xl"
-                      />
-                    </li>
-                  </Link>
+                  <CourseLessonCard lessonPart={lessonPart} index={index} />
                 ))}
               </ul>
             </div>

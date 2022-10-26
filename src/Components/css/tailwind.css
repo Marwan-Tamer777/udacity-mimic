@@ -17,3 +17,8 @@ body{
 /* .course-search-card:hover > div.bg-courseCard{
     right:20rem
 } */
+
+/* Course Page Classes*/
+.course-header-sticky h1{
+    @apply text-sm p-4 pl-20 font-black tracking-wider
+}
