@@ -1,7 +1,6 @@
 import {Component} from 'react'
 import {connect} from 'react-redux'
 import { ROUTE_GENERAL_COURSE_PAGE } from '../../Utils/routes'
-import { Link } from 'react-router-dom'
 import CourseLessonCard from './CourseLessonCard';
 
 
@@ -45,7 +44,7 @@ class CourseLessonOverview extends Component {
           <div className="grow flex flex-col justify-start content-center relative transition-all duration-500">
             <div
               id="courseHeader"
-              className=" text-udacity-text-black sticky top-0 "
+              className=" text-udacity-text-black sticky top-0"
             >
               <h1
                 className=" border-[#dbe2e8] border-b-[0.1rem] border-solid
@@ -75,7 +74,7 @@ class CourseLessonOverview extends Component {
               onScroll={this.toggleStickyHeader}
               className="overflow-y-auto"
             >
-              <ul>
+              <ul className="flex flex-col gap-6">
                 {lessonParts.map((lessonPart, index) => (
                   <CourseLessonCard lessonPart={lessonPart} index={index} />
                 ))}

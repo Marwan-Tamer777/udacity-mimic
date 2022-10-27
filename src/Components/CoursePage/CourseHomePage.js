@@ -17,7 +17,7 @@ class CourseHomePage extends Component {
     render(){
 
         return (
-          <div className="flex flex-row relative">
+          <div className="flex flex-row relative w-screen">
             <CourseNav callback={this.updateCurrentLesson} />
             <CourseLessonOverview currentLessonID={this.state.currentLessonID}/>
           </div>

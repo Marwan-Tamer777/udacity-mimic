@@ -4,6 +4,7 @@ import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { ROUTE_GENERAL_COURSE_PAGE } from '../../Utils/routes'
+import FocusableButton from '../Util/FocusableButton'
 
 /*
     The search functionality is split into 3 parts.
@@ -73,16 +74,12 @@ class SearchBar extends Component {
                     <p className=' text-sm'>{this.props.Courses[item].description}</p>
                   </div>
 
-                  <div className=' rounded-xl basis-[20%] flex flex-row justify-center items-center'>
-                    <button className='p-3 bg-udacity-white text-udacity-text-header rounded-xl opacity-100 transition-all shadow-udacity-standard focus:shadow-udacity-focused'>
-                      Program Home <FontAwesomeIcon icon="fa-solid fa-arrow-right" />
-                    </button>
-                  </div>
+                  <FocusableButton text="Program Home"/>
 
                 {/**
                  * this div works as the gradient background image for the above button
                  */}
-                  <div className=' absolute transition-all duration-500 w-[20%] 
+                  <div className=' absolute bg-black transition-all duration-500 w-[20%] 
                   h-full right-0 top-0  bg-courseCard opacity-30 group-hover:opacity-50 -z-10
                   before:absolute before:-left-[20%] before:-bottom-[10%] before:rotate-[20deg]  before:bg-udacity-white before:h-[150%] before:w-[50%]'>
                   </div>

@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import FocusableButton from "../Util/FocusableButton";
 
 const CourseLessonCard = ({lessonPart,index}) => {
 
@@ -9,38 +10,57 @@ const CourseLessonCard = ({lessonPart,index}) => {
     function randomNum(){
         return Math.floor(Math.random() * 100);
     }
+
   return (
     <div className="text-udacity-text-header">
       {shrink === 0 ? (
-        <Link to={"/Lesson/" + lessonPart.ID}>
           <li
-            className=" border-solid border-2 border-black shadow-2xl hover:shadow-none
-                    m-10 pl-10 flex flex-row rounded-2xl justify-start content-center bg-white"
+            className="shadow-[0_2px_4px_0_rgb(17_22_26_/_16%),_0_0_4px_0_rgb(17_22_26_/_8%),_0_4px_8px_0_rgb(17_22_26_/_4%)]
+             hover:shadow-[2px_4px_8px_0_rgb(46_61_73_/_20%)]
+              m-10 pl-10 flex flex-col rounded-2xl justify-start items-start bg-udacity-white relative"
+            style={{
+              backgroundImage: `url(${lessonPart.imgURL})`,
+              backgroundPosition: "right",
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "contain",
+            }}
           >
-            <h3 className="my-auto text-gray-500 font-medium text-xl">
+            <Link
+          to={"/Lesson/" + lessonPart.ID}
+          className="absolute top-0 right-0 w-full h-full z-10"
+        ></Link>
+            <h3 className="text-udacity-text-header font-semi-bold text-sm my-2">
               Lesson {index + 1}:
             </h3>
-            <div className=" mx-auto flex flex-col justify-evenly content-evenly">
-              <p className="text-2xl text-blue-400 font-semibold">
-                {lessonPart.title}
-              </p>
-              <p className=" font-medium p-4">{lessonPart.description}</p>
+            <p className="text-udacity-text-metal font-semibold text-lg my-4">
+              {lessonPart.title}
+            </p>
+            <p className="text-udacity-text-black my-2">
+              {lessonPart.description}
+            </p>
+            <div className="my-4">
+              <FocusableButton text="View Lesson" />
             </div>
-            <img
-              src={lessonPart.imgURL}
-              alt="pic"
-              className=" right-0 object-cover w-1/3 h-1/2 rounded-r-2xl"
-            />
+            <div className="flex flex-row justify-between items-center cursor-pointer">
+              <div></div>
+              <div
+                className="font-sm text-udacity-main z-10 relative"
+                onClick={() => setShrink(1)}
+              >
+                SHRINK CARD
+              </div>
+            </div>
           </li>
-        </Link>
       ) : (
         <div
-          className="flex flex-ro p-5 justify-between items-center shadow-udacity-standard "
-          onClick={() => (console.log("AFAFfa"), setShrink(1))}
+          className="flex flex-row w-[90%] mx-auto px-5 py-8 justify-between items-center shadow-udacity-standard "
+          onClick={() => setShrink(0)}
         >
-          <p>{lessonPart.title}</p>
+          <p className=" text-lg  text-udacity-text-black">
+            {lessonPart.title}
+          </p>
           <p className="text-udacity-greenLight">
-            <FontAwesomeIcon icon="fa-solid fa-check" />
+            <FontAwesomeIcon icon="fa-solid fa-check" className="mx-2" />
             Completed
           </p>
         </div>
