@@ -58,18 +58,18 @@ export default function CourseInfoCArd({course}){
               <div className='flex flex-row relative gap-1 text-udacity-star'>
                 <div className='absolute top-0 right-0 h-full bg-udacity-white' 
                 style={{width: ((1-(course.rating/5))*100)+"%"}}></div>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
+                <FontAwesomeIcon icon="fa-solid fa-star"/>
+                <FontAwesomeIcon icon="fa-solid fa-star"/>
+                <FontAwesomeIcon icon="fa-solid fa-star"/>
+                <FontAwesomeIcon icon="fa-solid fa-star"/>
+                <FontAwesomeIcon icon="fa-solid fa-star"/>
               </div>
             </div>
 
             <div>
               <p className=' text-udacity-text-header font-bold text-lg'>Authors:</p>
               <p className=' text-udacity-text-black font-thin text-sm'>{
-                course.authors.map((name,index)=>(<span>
+                course.authors.map((name,index)=>(<span key={name}>
                   {name + (index===course.authors.length-1? ('.'):(', '))}</span>))
               }</p>
             </div>

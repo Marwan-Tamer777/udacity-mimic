@@ -9,12 +9,12 @@ async function inital(dispatch){
   let res;
   let data=[]
 /*to access on phone, replace the localhost with the netwok IP */
-  try{
-  res = await fetch("http://localhost:5000/getUsers");
-  data = await res.json();
-  } catch(e){console.log(e)}
-  dispatch(receiveUsers(data))
-  data = [];
+  // try{
+  // res = await fetch("http://localhost:5000/getUsers");
+  // data = await res.json();
+  // } catch(e){console.log(e)}
+  // dispatch(receiveUsers(data))
+  // data = [];
 
   try{
   res = await fetch("http://localhost:5000/getCourses");

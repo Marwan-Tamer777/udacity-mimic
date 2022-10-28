@@ -12,7 +12,7 @@ class nav extends Component{
   /*
   Old li
   <li className=" p-1 m-1 rounded-lg hover:text-gray-400 bg-gradient-to-r hover:from-pink-400 hover:to-yellow-400 tracking-wider">
-      <NavLink to={ROUTE_HOME} exact activeClassName="active">
+      <NavLink to={ROUTE_HOME}  activeClassName="active">
         Home
       </NavLink>
   </li>
@@ -20,13 +20,14 @@ class nav extends Component{
   New li
   <li className='p-2 rounded-xl focus:shadow-udacity-focused transition-all flex flex-row items-center'>
       <FontAwesomeIcon icon="fa-solid fa-house" className='mx-2' />
-      <NavLink to={ROUTE_HOME} exact activeClassName="active">
+      <NavLink to={ROUTE_HOME}  activeClassName="active">
             Home
       </NavLink>
   </li>
   */
 
   toggleNav(){
+    
     let nav = document.getElementById("navMain");
     //nav.style.transform = nav.style.transform === "translateX(-100%)" ? "" : "translateX(-100%)";
     nav.style.marginLeft = nav.style.marginLeft === `-${nav.offsetWidth}px` ? "0px": `-${nav.offsetWidth}px`;
@@ -36,6 +37,10 @@ class nav extends Component{
 
   componentDidMount(){
     document.getElementById("navIcon").addEventListener("click", this.toggleNav)
+    if (window.screen.width < 768) {
+      let nav = document.getElementById("navMain");
+      nav.style.marginLeft = `-${nav.offsetWidth}px`;
+    }
   }
 
     render() {
@@ -56,7 +61,7 @@ class nav extends Component{
 
               <li className='p-2 rounded-xl hover:shadow-udacity-focused transition-all
                flex flex-row items-center'>
-                <NavLink to={ROUTE_HOME} exact activeClassName="active">
+                <NavLink to={ROUTE_HOME} >
                  <FontAwesomeIcon icon="fa-solid fa-house" className='mx-3' />
                     Home
                   </NavLink>
@@ -64,7 +69,7 @@ class nav extends Component{
 
               <li className='p-2 rounded-xl hover:shadow-udacity-focused transition-all
                flex flex-row items-center'>
-                <NavLink to={ROUTE_HOME} exact activeClassName="active">
+                <NavLink to={ROUTE_HOME} >
                   <FontAwesomeIcon icon="fa-solid fa-life-ring" className='mx-3' />
                  
                     Help
@@ -73,7 +78,7 @@ class nav extends Component{
 
               <li className='p-2 rounded-xl hover:shadow-udacity-focused transition-all
                flex flex-row items-center'>
-                <NavLink to={ROUTE_HOME} exact activeClassName="active">
+                <NavLink to={ROUTE_HOME} >
                  <FontAwesomeIcon icon="fa-regular fa-compass" className='mx-3'/>
                  
                     Catalog
@@ -82,7 +87,7 @@ class nav extends Component{
 
               <li className='p-2 rounded-xl hover:shadow-udacity-focused transition-all
                flex flex-row items-center'>
-                 <NavLink to={ROUTE_HOME} exact activeClassName="active">
+                 <NavLink to={ROUTE_HOME} >
                  <FontAwesomeIcon icon="fa-solid fa-gear" className='mx-3'/>
                     Setting
                   </NavLink>
@@ -95,7 +100,7 @@ class nav extends Component{
                   <>
                   <li className='p-2 rounded-xl hover:shadow-udacity-focused transition-all
                   flex flex-row items-center'>
-                    <NavLink to={ROUTE_SIGN_UP} exact activeClassName="active">
+                    <NavLink to={ROUTE_SIGN_UP} >
                     <FontAwesomeIcon icon="fa-solid fa-arrow-right-to-bracket" className='mx-3' />
                     
                       Sign Up
@@ -103,7 +108,7 @@ class nav extends Component{
                   </li>
                   <li className='p-2 rounded-xl hover:shadow-udacity-focused transition-all
                   flex flex-row items-center'>
-                    <NavLink to={ROUTE_SIGN_IN} exact activeClassName="active">
+                    <NavLink to={ROUTE_SIGN_IN}>
                     <FontAwesomeIcon icon="fa-solid fa-arrow-right-from-bracket" className='mx-3' />
                     
                         Sign in

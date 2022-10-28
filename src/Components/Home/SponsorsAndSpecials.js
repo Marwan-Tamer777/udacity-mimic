@@ -132,7 +132,7 @@ class SponsorsSpecialsPage extends Component {
           </div>
 
           <div>
-            <h3 className=" mr-auto text-udacity-text-header font-bold ml-3 my-4">
+            <h3 className=" mr-auto text-udacity-text-header font-bold ml-3 my-6">
               Powered by the industry just for you!
             </h3>
             <div className="flex flex-row flex-wrap justify-around items-center">

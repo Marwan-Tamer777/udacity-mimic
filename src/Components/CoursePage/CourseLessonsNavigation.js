@@ -11,7 +11,7 @@ class CourseLessonsNavigation extends Component {
     render(){
 
         let course = this.props.Courses[(window.location.pathname).substring(8,30)]
-        if(course.lessonsID.length === 1){return<div></div>}
+        if(course.lessonsID.length <= 1){return<div></div>}
         return (
           <div className="overflow-y-auto shadow-lg transition-all duration-500 ">
             <h4
@@ -26,6 +26,7 @@ class CourseLessonsNavigation extends Component {
                   className="flex flex-row items-center gap-4 bg-udacity-emerald text-udacity-text-gray 
                   px-4 py-10 border-udacity-text-header border-b-[0.1rem] border-solid"
                   key={ID}
+                  id={ID}
                   to={window.location.pathname.substring(0, 30) + "/" + ID}
                   onClick={() => this.props.callback(ID)}
                 >

@@ -24,19 +24,19 @@ class CourseLessonOverview extends Component {
     render(){
 
         let course = this.props.Courses[(window.location.pathname).substring(8,30)]
-        let lesson = this.props.currentLessonID;
-        let lessonParts = lesson.length ===0 ? ('') : (this.props.Lessons[lesson].lessonPartsID.map((ID)=>(
+        let lessonID = this.props.currentLessonID;
+        let lessonParts = lessonID.length ===0 ? ('') : (this.props.Lessons[lessonID].lessonPartsID.map((ID)=>(
             this.props.LessonParts[ID]
         )))
 
-        if(lesson==='' && course.lessonsID.length!==1){return <div>{/*add a homepage for the course here */}</div>}
+        if(lessonID==='' && course.lessonsID.length!==1){return <div>{/*add a homepage for the course here */}</div>}
         
-        else if(lesson==='' && course.lessonsID.length ===1){
-            lesson= course.lessonsID[0]
-            lessonParts = (this.props.Lessons[lesson].lessonPartsID.map((ID)=>(
+        else if(lessonID==='' && course.lessonsID.length ===1){
+            lessonID= course.lessonsID[0]
+            lessonParts = (this.props.Lessons[lessonID].lessonPartsID.map((ID)=>(
             this.props.LessonParts[ID]
         )))
-        window.history.pushState({},'',new URL(window.location.origin+ ROUTE_GENERAL_COURSE_PAGE + course.ID+ '/'+lesson))
+        window.history.pushState({},'',new URL(window.location.origin+ ROUTE_GENERAL_COURSE_PAGE + course.ID+ '/'+lessonID))
         }
 
 
@@ -50,18 +50,18 @@ class CourseLessonOverview extends Component {
                 className=" border-[#dbe2e8] border-b-[0.1rem] border-solid
                text-4xl p-10 font-thin transition-all duration-300"
               >
-                {course.lessonsID.indexOf(lesson) +
+                {course.lessonsID.indexOf(lessonID) +
                   1 +
                   ". " +
-                  this.props.Lessons[lesson].title}
+                  this.props.Lessons[lessonID].title}
               </h1>
 
               <div className="flex flex-row p-4 justify-between items-center">
                 <p>
-                  {course.lessonsID.indexOf(lesson) ===
+                  {course.lessonsID.indexOf(lessonID) ===
                   course.lessonsID.length - 1
                     ? `Proceed to Part ${
-                        course.lessonsID.indexOf(lesson) + 1
+                        course.lessonsID.indexOf(lessonID) + 1
                       } to continue learning`
                     : `You have completed all requirements for Part ${course.lessonsID.length}`}
                 </p>

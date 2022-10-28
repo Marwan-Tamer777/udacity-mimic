@@ -6,10 +6,14 @@ import CourseLessonsNavigation from "./CourseLessonsNavigation";
 import { useEffect } from "react";
 
 
-const CoruseNav = (props) => {
+const CourseNav = (props) => {
 
     useEffect(() => {
-	document.getElementById("navIcon").addEventListener("click", toggleNav)
+      document.getElementById("navIcon").addEventListener("click", toggleNav)
+      if (window.screen.width < 768) {
+        let nav = document.getElementById("navMain");
+        nav.style.marginLeft = `-${nav.offsetWidth}px`;
+      }
 }, []);
 
     let toggleNav =()=>{
@@ -92,4 +96,4 @@ const CoruseNav = (props) => {
   );
 };
 
-export default CoruseNav;
+export default CourseNav;
