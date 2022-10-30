@@ -31,7 +31,7 @@ class LessonConceptList extends Component {
             <h4 className=" text-udacity-text-white text-lg">{lesson.title}</h4>
           </div>
 
-          <div className="lesson_list flex-auto">
+          <div className="lesson_list flex flex-col overflow-y-hidden">
             <div
               className="lesson_list_tab expand_list flex flex-row justify-between item-center
               p-5 bg-[rgba(31,41,50,.5)] shadow-[inset_0_-1px_0_0_rgb(0_0_0_/_50%),inset_0_1px_0_0_rgb(0_0_0_/_50%)]
