@@ -22,3 +22,17 @@ body{
 .course-header-sticky h1{
     @apply text-sm p-4 pl-20 font-black tracking-wider
 }
+
+/* Lesson Page Classes */
+
+  .lesson_list:has(.lesson_list_tab) > ol{
+    @apply hidden
+ }
+
+  .lesson_list:has(.lesson_list_tab.expand_list) > ol{
+    @apply block
+ }
+
+   .lesson_list_tab.expand_list > svg{
+    @apply rotate-180
+ }

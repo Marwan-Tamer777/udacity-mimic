@@ -4,25 +4,22 @@ import LessonConceptList from './LessonConceptList'
 import ConceptPage from './ConceptPage'
 
 class LeessonMainPage extends Component {
+  state = {
+    currentConceptID:
+      this.props.LessonParts[window.location.pathname.substring(8, 30)].conceptsID[0]
+  };
 
-    state={
-        currentConceptID: ''
-    }
+  updateCurrentConcept = (ID) =>
+    this.setState(() => ({ currentConceptID: ID }));
 
-    updateCurrentConcept = (ID)=> (this.setState(()=>({currentConceptID: ID})))
-    
-    
-
-    render(){
-        return (
-          <div className="flex flex-row">
-            <LessonConceptList callback={this.updateCurrentConcept} />
-            {<ConceptPage currentConceptID={this.state.currentConceptID} />}
-          </div>
-        );
-    }
-
-
+  render() {
+    return (
+      <div className="flex flex-row w-screen text-udacity-text-header">
+        <LessonConceptList callback={this.updateCurrentConcept} />
+        <ConceptPage currentConceptID={this.state.currentConceptID} />
+      </div>
+    );
+  }
 }
 
 function mapStateToProps ({Courses,Lessons,LessonParts}) {

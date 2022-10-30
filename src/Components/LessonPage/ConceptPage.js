@@ -187,7 +187,7 @@ class ConceptPage extends Component {
       return <div></div>;
     }
     return (
-      <div className="w-4/5 flex flex-col absolute right-0 top-top-nav">
+      <div className="basis-[75%] grow flex flex-col overflow-y-auto">
         {concept.conceptList.map((cConcept, index) => (
           <div key={index}>{this.conceptDecide(cConcept)}</div>
         ))}
