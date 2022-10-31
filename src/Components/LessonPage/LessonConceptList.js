@@ -16,7 +16,7 @@ class LessonConceptList extends Component {
       let lesson = this.props.LessonParts[(window.location.pathname).substring(8,30)]
 
       return (
-        <div className="basis-[25%] flex flex-col h-screen bg-udacity-emerald">
+        <div className="w-full flex flex-col h-screen bg-udacity-emerald">
           <div
             className="flex flex-row group p-5"
             onClick={() => window.history.back()}
@@ -48,17 +48,21 @@ class LessonConceptList extends Component {
             <ol className="flex flex-col bg-blue-udacity overflow-y-auto flex-auto">
               {lesson.conceptsID.map((ID, index) => (
                 <li
-                  className="p-6 bg-blue-udacity hover:text-white hover:bg-blue-900 text-lg font-semibold text-gray-400
-                  text-center transform transition hover:-translate-y-2"
+                  className="p-4 transition-all text-udacity-text-gray hover:text-udacity-text-white"
                   key={ID}
                   to={window.location.pathname.substring(0, 30) + "/" + ID}
                   onClick={() => this.props.callback(ID)}
                 >
+                  <FontAwesomeIcon
+                    icon="fa-solid fa-check"
+                    className="text-udacity-emeraldLight mr-3"
+                  />
                   {index + 1 + ". " + this.props.Concepts[ID].description}
                 </li>
               ))}
             </ol>
           </div>
+
         </div>
       );
   }

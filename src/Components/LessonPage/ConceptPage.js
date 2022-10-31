@@ -187,7 +187,10 @@ class ConceptPage extends Component {
       return <div></div>;
     }
     return (
-      <div className="basis-[75%] grow flex flex-col overflow-y-auto">
+      <div className="basis-[75%] grow flex flex-col relative overflow-y-auto">
+        <div className="bg-udacity-nav sticky top-0 text-center text-white text-xl tracking-wider p-5">
+          {concept.description}
+        </div>
         {concept.conceptList.map((cConcept, index) => (
           <div key={index}>{this.conceptDecide(cConcept)}</div>
         ))}

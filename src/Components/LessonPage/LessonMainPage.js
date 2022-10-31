@@ -1,7 +1,7 @@
 import {Component} from 'react'
 import {connect} from 'react-redux'
-import LessonConceptList from './LessonConceptList'
 import ConceptPage from './ConceptPage'
+import LessonNav from './LessonNav';
 
 class LeessonMainPage extends Component {
   state = {
@@ -15,7 +15,7 @@ class LeessonMainPage extends Component {
   render() {
     return (
       <div className="flex flex-row w-screen text-udacity-text-header">
-        <LessonConceptList callback={this.updateCurrentConcept} />
+        <LessonNav callback={this.updateCurrentConcept} />
         <ConceptPage currentConceptID={this.state.currentConceptID} />
       </div>
     );

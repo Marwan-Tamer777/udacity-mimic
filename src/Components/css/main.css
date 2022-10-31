@@ -584,6 +584,10 @@ video {
   right: -3.5rem;
 }
 
+.-right-8 {
+  right: -2rem;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -758,10 +762,6 @@ video {
   height: 2rem;
 }
 
-.h-40 {
-  height: 10rem;
-}
-
 .w-screen {
   width: 100vw;
 }
@@ -816,10 +816,18 @@ video {
   width: 2rem;
 }
 
+.w-\[30\%\] {
+  width: 30%;
+}
+
 .min-w-fit {
   min-width: -webkit-fit-content;
   min-width: -moz-fit-content;
   min-width: fit-content;
+}
+
+.max-w-\[75\%\] {
+  max-width: 75%;
 }
 
 .flex-auto {
@@ -860,6 +868,14 @@ video {
 
 .basis-\[25\%\] {
   flex-basis: 25%;
+}
+
+.basis-\[35\%\] {
+  flex-basis: 35%;
+}
+
+.basis-\[40\%\] {
+  flex-basis: 40%;
 }
 
 .transform {
@@ -1061,10 +1077,6 @@ video {
 
 .overflow-y-hidden {
   overflow-y: hidden;
-}
-
-.overflow-y-scroll {
-  overflow-y: scroll;
 }
 
 .rounded-2xl {
@@ -1519,6 +1531,11 @@ video {
   color: rgb(156 163 175 / var(--tw-text-opacity));
 }
 
+.text-udacity-emeraldLight {
+  --tw-text-opacity: 1;
+  color: rgb(2 204 186 / var(--tw-text-opacity));
+}
+
 .text-green-500 {
   --tw-text-opacity: 1;
   color: rgb(34 197 94 / var(--tw-text-opacity));
@@ -1711,15 +1728,17 @@ body{
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.hover\:-translate-y-2:hover {
-  --tw-translate-y: -0.5rem;
-  -webkit-transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-          transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+.hover\:bg-\[\#404950\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(64 73 80 / var(--tw-bg-opacity));
 }
 
-.hover\:bg-blue-900:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(30 58 138 / var(--tw-bg-opacity));
+.hover\:bg-\[\#ffffff29\]:hover {
+  background-color: #ffffff29;
+}
+
+.hover\:bg-\[rgb\(255_255_255_\/_16\%\)\]:hover {
+  background-color: rgb(255 255 255 / 16%);
 }
 
 .hover\:from-red-400:hover {
@@ -1748,11 +1767,6 @@ body{
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.hover\:text-white:hover {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
 .hover\:text-gray-400:hover {
   --tw-text-opacity: 1;
   color: rgb(156 163 175 / var(--tw-text-opacity));
@@ -1774,6 +1788,19 @@ body{
   --tw-shadow: 0 0 8px 0 rgb(17 22 26 / 6%), 0 4px 16px 0 rgb(17 22 26 / 8%), 0 8px 12px 0 rgb(17 22 26 / 6%), 0 16px 24px 0 rgb(17 22 26 / 4%);;
   --tw-shadow-colored: 0 0 8px 0 var(--tw-shadow-color), 0 4px 16px 0 var(--tw-shadow-color), 0 8px 12px 0 var(--tw-shadow-color), 0 16px 24px 0 var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.focus\:bg-\[\#404950\]:focus {
+  --tw-bg-opacity: 1;
+  background-color: rgb(64 73 80 / var(--tw-bg-opacity));
+}
+
+.focus\:bg-\[\#ffffff29\]:focus {
+  background-color: #ffffff29;
+}
+
+.focus\:bg-\[rgb\(255_255_255_\/_16\%\)\]:focus {
+  background-color: rgb(255 255 255 / 16%);
 }
 
 .focus\:shadow-udacity-focused:focus {
