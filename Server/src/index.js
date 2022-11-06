@@ -1,11 +1,13 @@
-import app from "./server"
+import app from "./server.js"
 import {MongoClient} from 'mongodb'
-import ConceptsDao from './DAO/Concepts'
-import CoursesDao from './DAO/Courses'
-import LessonsDao from "./DAO/Lessons";
-import LessonsPartsDao from "./DAO/LessonsParts";
-import UsersDao from "./DAO/Users";
+import ConceptsDao from './DAO/Concepts.js'
+import CoursesDao from './DAO/Courses.js'
+import LessonsDao from "./DAO/Lessons.js";
+import LessonsPartsDao from "./DAO/LessonsParts.js";
+import UsersDao from "./DAO/Users.js";
+import * as dotenv from "dotenv";
 
+dotenv.config();
 const port = process.env.PORT || 8000
 
 
@@ -13,6 +15,7 @@ const port = process.env.PORT || 8000
 Math.random().toString(36).substr(-8)
 use this line to generate more random IDs
 */
+
 MongoClient.connect(
   process.env.CONN_URI,
   { useNewUrlParser: true,wtimeout: 2500 }

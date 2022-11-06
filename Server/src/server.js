@@ -3,11 +3,11 @@ import { Router } from "express";
 import bodyParser from "body-parser"
 import cors from "cors"
 import morgan from "morgan"
-import ConceptsDao from "./DAO/Concepts";
-import CoursesDao from "./DAO/Courses";
-import LessonsDao from "./DAO/Lessons";
-import LessonPartsDao from "./DAO/LessonsParts";
-import UsersDao from "./DAO/Users";
+import ConceptsDao from "./DAO/Concepts.js";
+import CoursesDao from "./DAO/Courses.js";
+import LessonsDao from "./DAO/Lessons.js";
+import LessonPartsDao from "./DAO/LessonsParts.js";
+import UsersDao from "./DAO/Users.js";
 
 const router = new Router();
 const app = express()
