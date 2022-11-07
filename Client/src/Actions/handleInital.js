@@ -4,41 +4,41 @@ import {receiveCourses} from './courses'
 import {receiveLessons} from './lessons'
 import {receiveLessonParts} from './lessonParts'
 import {receiveConcepts} from './concepts'
-
+let serverURL = "https://udacityclone.herokuapp.com";
 async function inital(dispatch){
   let res;
   let data=[]
 /*to access on phone, replace the localhost with the netwok IP */
   // try{
-  // res = await fetch("http://localhost:5000/getUsers");
+  // res = await fetch("${serverURL}/getUsers");
   // data = await res.json();
   // } catch(e){console.log(e)}
   // dispatch(receiveUsers(data))
   // data = [];
 
   try{
-  res = await fetch("http://localhost:5000/getCourses");
+  res = await fetch(`${serverURL}/getCourses`);
   data = await res.json();
   } catch(e){console.log(e)}
   dispatch(receiveCourses(data));
   data = [];
 
   try{
-  res = await fetch("http://localhost:5000/getLessons");
+  res = await fetch(`${serverURL}/getLessons`);
   data = await res.json();
   } catch(e){console.log(e)}
   dispatch(receiveLessons(data));
   data = [];
 
   try{
-  res = await fetch("http://localhost:5000/getLessonParts");
+  res = await fetch(`${serverURL}/getLessonParts`);
   data = await res.json();
   } catch(e){console.log(e)}
   dispatch(receiveLessonParts(data));
   data = [];
 
   try{
-  res = await fetch("http://localhost:5000/getConcepts");
+  res = await fetch(`${serverURL}/getConcepts`);
   data = await res.json();
   } catch(e){console.log(e)}
   dispatch(receiveConcepts(data));
@@ -63,7 +63,7 @@ export function handleInitialData () {
     let data = [];
     //to access on phone, replace the localhost with the netwok IP 
     try {
-      res = await fetch("http://localhost:5000/getUsers");
+      res = await fetch("${serverURL}/getUsers");
       data = await res.json();
     } catch (e) {
       console.log(e);
@@ -72,7 +72,7 @@ export function handleInitialData () {
     data = [];
 
     try {
-      res = await fetch("http://localhost:5000/getCourses");
+      res = await fetch("${serverURL}/getCourses");
       data = await res.json();
     } catch (e) {
       console.log(e);
@@ -81,7 +81,7 @@ export function handleInitialData () {
     data = [];
 
     try {
-      res = await fetch("http://localhost:5000/getLessons");
+      res = await fetch("${serverURL}/getLessons");
       data = await res.json();
     } catch (e) {
       console.log(e);
@@ -90,7 +90,7 @@ export function handleInitialData () {
     data = [];
 
     try {
-      res = await fetch("http://localhost:5000/getLessonParts");
+      res = await fetch("${serverURL}/getLessonParts");
       data = await res.json();
     } catch (e) {
       console.log(e);
@@ -99,7 +99,7 @@ export function handleInitialData () {
     data = [];
 
     try {
-      res = await fetch("http://localhost:5000/getConcepts");
+      res = await fetch("${serverURL}/getConcepts");
       data = await res.json();
     } catch (e) {
       console.log(e);
