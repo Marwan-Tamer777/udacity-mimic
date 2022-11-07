@@ -1,5 +1,13 @@
 import {Component} from 'react'
 import {connect} from 'react-redux'
+import practical from '../../Images/practical.svg'
+import training from '../../Images/training.svg'
+import ideas from "../../Images/ideas.svg";
+import hosting from '../../Images/hosting.svg'
+import courses from "../../Images/courses.svg";
+import academy from "../../Images/academy.svg";
+import expert from "../../Images/expert.svg";
+import community from "../../Images/community.svg";
 
 class SponsorsSpecialsPage extends Component {
 
@@ -15,10 +23,10 @@ class SponsorsSpecialsPage extends Component {
             <h3 className="mr-auto text-udacity-text-header font-bold ml-3 my-4 ">
               What makes us special?
             </h3>
-            <div className=" flex flex-row flex-wrap justify-around items-center gap-6">
+            <div className=" flex flex-row flex-wrap justify-center items-start gap-6">
               <div className="basis-[20%]">
                 <img
-                  src="https://elzero.org/wp-content/themes/elzero/imgs/features/practical.svg"
+                  src={practical}
                   alt="Practical"
                   className=" object-cover w-[60%] h-[60%] mx-auto my-4"
                 />
@@ -32,7 +40,7 @@ class SponsorsSpecialsPage extends Component {
               </div>
               <div className="basis-[20%]">
                 <img
-                  src="https://elzero.org/wp-content/themes/elzero/imgs/features/trainings.svg"
+                  src={training}
                   alt="Training"
                   className=" object-cover w-[60%] h-[60%] mx-auto my-4"
                 />
@@ -46,7 +54,7 @@ class SponsorsSpecialsPage extends Component {
               </div>
               <div className="basis-[20%]">
                 <img
-                  src="https://elzero.org/wp-content/themes/elzero/imgs/features/ideas.svg"
+                  src={ideas}
                   alt="Ideas"
                   className=" object-cover w-[60%] h-[60%] mx-auto my-4"
                 />
@@ -60,7 +68,7 @@ class SponsorsSpecialsPage extends Component {
               </div>
               <div className="basis-[20%]">
                 <img
-                  src="https://elzero.org/wp-content/themes/elzero/imgs/features/hosting.svg"
+                  src={hosting}
                   alt="Hosting"
                   className=" object-cover w-[60%] h-[60%] mx-auto my-4"
                 />
@@ -74,7 +82,7 @@ class SponsorsSpecialsPage extends Component {
               </div>
               <div className="basis-[20%]">
                 <img
-                  src="https://elzero.org/wp-content/themes/elzero/imgs/features/courses.svg"
+                  src={courses}
                   alt="Courses"
                   className=" object-cover w-[60%] h-[60%] mx-auto my-4"
                 />
@@ -88,7 +96,7 @@ class SponsorsSpecialsPage extends Component {
               </div>
               <div className="basis-[20%]">
                 <img
-                  src="https://elzero.org/wp-content/themes/elzero/imgs/features/academy.svg"
+                  src={academy}
                   alt="Academic"
                   className=" object-cover w-[60%] h-[60%] mx-auto my-4"
                 />
@@ -102,7 +110,7 @@ class SponsorsSpecialsPage extends Component {
               </div>
               <div className="basis-[20%]">
                 <img
-                  src="https://elzero.org/wp-content/themes/elzero/imgs/features/expert.svg"
+                  src={expert}
                   alt="Expert"
                   className=" object-cover w-[60%] h-[60%] mx-auto my-4"
                 />
@@ -116,7 +124,7 @@ class SponsorsSpecialsPage extends Component {
               </div>
               <div className="basis-[20%]">
                 <img
-                  src="https://elzero.org/wp-content/themes/elzero/imgs/features/community.svg"
+                  src={community}
                   alt="Community"
                   className=" object-cover w-[60%] h-[60%] mx-auto my-4"
                 />
