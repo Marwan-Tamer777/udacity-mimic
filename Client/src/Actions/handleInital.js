@@ -4,7 +4,7 @@ import {receiveCourses} from './courses'
 import {receiveLessons} from './lessons'
 import {receiveLessonParts} from './lessonParts'
 import {receiveConcepts} from './concepts'
-let serverURL = "https://udacityclone.herokuapp.com";
+let serverURL = "https://udacity-clone-server.onrender.com";
 async function inital(dispatch){
   let res;
   let data=[]
